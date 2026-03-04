@@ -83,7 +83,7 @@ const OutdoorTracker: React.FC<OutdoorTrackerProps> = ({ onBack }) => {
           <span className="text-sm font-medium uppercase tracking-widest">Back Home</span>
         </button>
 
-        <div className="flex items-center gap-2 text-gray-400 select-none">
+        <div className="!hidden md:!flex items-center gap-2 text-gray-400 select-none">
           <Mountain size={18} strokeWidth={2} />
           <span className="text-sm font-medium uppercase tracking-widest">Outdoor Tracker</span>
         </div>

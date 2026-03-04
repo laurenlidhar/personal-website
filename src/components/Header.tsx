@@ -6,20 +6,21 @@ import myHeadshot from '../assets/headshot.jpg';
 const Header: React.FC = () => {
   return (
     <section className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-12 md:items-center gap-8 md:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-12 md:items-center gap-10 md:gap-0">
+        
         <div className="md:col-span-8">
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-7xl font-semibold tracking-tight text-black leading-tight">
+            <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-black leading-tight text-center md:text-left">
               Lauren Lidhar
             </h1>
             
             <div className="space-y-8"> 
-              <div className="text-gray-600 leading-relaxed text-base md:text-lg max-w-4xl font-medium">
+              <div className="text-gray-600 leading-relaxed text-base md:text-lg max-w-4xl font-medium text-center md:text-left">
                 <p>Hi, I'm Lauren! I first discovered my interest in tech through the Technovation Girls Challenge, where an unexpected semi-finalist win turned a "for fun" project into a career path. I’ve spent the last few years building on that curiosity and am currently looking for my next full-time challenge.</p>
-                <p className="mt-4">Outside of my academic and professional life, you can find me on the frisbee field or finding a new coffee shop. I’m open to new opportunities -feel free to reach out, I’d love to chat!</p>
+                <p className="mt-4">Outside of my academic and professional life, you can find me on the frisbee field or finding a new coffee shop. I’m open to new opportunities—feel free to reach out, I’d love to chat!</p>
               </div>
               
-              <div className="flex flex-wrap items-center gap-x-2">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
                 <SocialLink href="https://linkedin.com/in/lauren-lidhar/" icon={Linkedin} label="LinkedIn" />
                 <SocialLink href="https://github.com/laurenlidhar" icon={Github} label="GitHub" />
                 <SocialLink href="mailto:lidharlauren@gmail.com" icon={Mail} label="Email" />
@@ -30,11 +31,16 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        <div className="md:col-span-4 flex justify-end">
-          <div className="w-40 h-60 md:w-52 md:h-78 overflow-hidden border border-gray-100 bg-gray-50 shrink-0">
-            <img src={myHeadshot} alt="Lauren Lidhar" className="w-full h-full object-cover block" />
+        <div className="md:col-span-4 flex justify-center md:justify-end mt-8 md:mt-0">
+          <div className="w-40 h-62 md:w-52 md:h-79 overflow-hidden border border-gray-100 bg-gray-50 shrink-0">
+            <img 
+              src={myHeadshot} 
+              alt="Lauren Lidhar" 
+              className="w-full h-full object-cover block" 
+            />
           </div>
         </div>
+
       </div>
     </section>
   );

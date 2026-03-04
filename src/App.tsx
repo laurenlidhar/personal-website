@@ -57,11 +57,11 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-gray-100 font-sans tracking-tight">
-      <main className="max-w-[1020px] mx-auto px-6 pt-44 pb-24 space-y-28">
+      <main className="max-w-[1020px] mx-auto px-6 pt-24 md:pt-44 pb-24 space-y-20 md:space-y-28">
         
         <Header />
 
-        <div className="max-w-2xl mx-auto w-full space-y-28">
+        <div className="max-w-2xl mx-auto w-full space-y-20 md:space-y-28">
           
           <section className="space-y-6">
             <SectionHeader title="Experience" />
@@ -88,10 +88,10 @@ const App: React.FC = () => {
 
           <section className="space-y-12">
             <SectionHeader title="Adventures" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div 
                 onClick={() => setView('coffee-map')} 
-                className="space-y-4 p-5 -m-4 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
+                className="space-y-4 p-5 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 font-bold text-base">
@@ -107,7 +107,7 @@ const App: React.FC = () => {
 
               <div 
                 onClick={() => setView('outdoor-tracker')} 
-                className="space-y-4 p-5 -m-4 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
+                className="space-y-4 p-5 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 font-bold text-base">
