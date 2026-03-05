@@ -57,27 +57,27 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] selection:bg-gray-100 font-sans tracking-tight">
-      <main className="max-w-[1020px] mx-auto px-6 pt-24 md:pt-44 pb-24 space-y-20 md:space-y-28">
+      <main className="max-w-[1020px] mx-auto px-6 pt-8 md:pt-12 pb-24 space-y-20 md:space-y-28">
         
         <Header />
 
         <div className="max-w-2xl mx-auto w-full space-y-20 md:space-y-28">
           
-          <section className="space-y-6">
+          <section id="experience" className="space-y-6 scroll-mt-32">
             <SectionHeader title="Experience" />
             <div className="space-y-2">
               {experiences.map((item, idx) => <ExperienceItem key={idx} item={item} />)}
             </div>
           </section>
 
-          <section className="space-y-6">
+          <section id="leadership" className="space-y-6 scroll-mt-32">
             <SectionHeader title="Leadership" />
             <div className="space-y-2">
               {leadership.map((item, idx) => <LeadershipItem key={idx} item={item} />)}
             </div>
           </section>
 
-          <section className="space-y-12">
+          <section id="projects" className="space-y-12 scroll-mt-32">
             <SectionHeader title="Projects" />
             <div className="flex flex-col gap-10">
               {projects.map((project, idx) => (
@@ -86,40 +86,42 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          <section className="space-y-12">
+          <section id="adventures" className="space-y-12 scroll-mt-32">
             <SectionHeader title="Adventures" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              
               <div 
                 onClick={() => setView('coffee-map')} 
-                className="space-y-4 p-5 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
+                className="space-y-4 p-5 -mx-2 rounded-xl hover:bg-black/[0.04] transition-all cursor-pointer group border border-transparent hover:border-gray-50 flex flex-col"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 font-bold text-base">
-                    <Coffee size={20} className="text-gray-700" />
+                  <div className="flex items-center gap-3 font-bold text-[16px]">
+                    <Coffee size={22} className="text-gray-700" />
                     <span>Coffee Shop Exploration</span>
                   </div>
                   <MapIcon size={16} className="text-gray-300 group-hover:text-black transition-colors" />
                 </div>
-                <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                <p className="text-sm text-gray-500 leading-relaxed font-medium max-w-[240px]">
                   Exploring new coffee shops from Vancouver to Toronto and beyond.
                 </p>
               </div>
 
               <div 
                 onClick={() => setView('outdoor-tracker')} 
-                className="space-y-4 p-5 rounded-xl hover:bg-black/[0.06] transition-all cursor-pointer group"
+                className="space-y-4 p-5 -mx-2 rounded-xl hover:bg-black/[0.04] transition-all cursor-pointer group border border-transparent hover:border-gray-50 flex flex-col"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 font-bold text-base">
-                    <Mountain size={20} className="text-gray-700" />
+                  <div className="flex items-center gap-3 font-bold text-[16px]">
+                    <Mountain size={22} className="text-gray-700" />
                     <span>Outdoor Tracker</span>
                   </div>
                   <BookOpen size={16} className="text-gray-300 group-hover:text-black transition-colors" />
                 </div>
-                <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                <p className="text-sm text-gray-500 leading-relaxed font-medium max-w-[240px]">
                   A personal log tracking my return to being more active.
                 </p>
               </div>
+
             </div>
           </section>
         </div>
